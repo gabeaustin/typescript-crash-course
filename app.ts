@@ -47,11 +47,29 @@ let arrMix2: (string | number | boolean)[] = [2, "b", false];  // not common pra
 let arrTup = ["a string", 5];
 let arrTup2: [string, number] = ["gnirts a", 10];
 arrTup2 = ["b", 4];
-// arrTup2 = [4, "b"]; // error
+// arrTup2 = [4, "b"]; // not valid
 
 
 
-/* AND OBJECTS */
+/* OBJECTS */
+let person = {
+    name: "Gabe",
+    age: 38
+};
+
+// type aliases
+type stringOrNum = string | number;
+let yearNow: string | number;
+yearNow = 2021; // valid
+yearNow = "2021"; // valid
+// yearNow = true; // not valid
+
+
+
+/* FUNCTIONS */
+
+
+
 
 
 
