@@ -67,9 +67,20 @@ yearNow = "2021"; // valid
 
 
 /* FUNCTIONS */
+function calcSum(a: number, b: number) {
+    return a + b;
+}
 
+calcSum(2, 2);
 
+// Arrow Function
+let calcSum2: (a: number, b: number, c?: number) => number; // question mark = optional
 
+calcSum2 = (first: number, second: number) => {
+    return first + second;
+}
+
+calcSum2(2, 3);
 
 
 
