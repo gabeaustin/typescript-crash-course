@@ -84,6 +84,42 @@ calcSum2(2, 3);
 
 
 
+/* VOIDs */
+const sayHi = () => {
+    console.log("hi");
+}
+
+
+
+/* INTERFACES */
+interface PersonInterface {
+    name: string;
+    age: number;
+}
+
+let gabe = {
+    name: "Gabe",
+    age: 38
+}
+
+class Person implements PersonInterface {
+    name: string;
+    age: number;
+
+    constructor(n: string, a: number) {
+        this.name = n;
+        this.age = a;
+    }
+    // add a method
+    greet() {
+        return `Hi, my name is ${this.name} and I am ${this.age}.`
+    }
+}
+
+let john = new Person("John", 35);
+console.log(john.greet());
+
+
 
 
 
