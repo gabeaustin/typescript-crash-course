@@ -21,7 +21,7 @@ const parsedYear = parseInt(year);
 
 
 
-/* ARRAYS AND OBJECTS */
+/* ARRAYS */
 let arrString = ["a", "b", "c"]; // is the same as (below)
 let arrString2: string[] = ["a", "b", "c"];
 // arrString[0] = 1; // not allowed
@@ -36,6 +36,22 @@ let arrNumber2: number[] = [1, 2, 3];
 let arrBool = [true, false];
 let arrBool2: boolean[];
 let arrBool3: boolean[] = [true, false];
+
+let arrMix = [1, "a", true];
+let arrMix2: (string | number | boolean)[] = [2, "b", false];  // not common practice
+
+
+
+// Tuple
+// with a tuple you define inside the array
+let arrTup = ["a string", 5];
+let arrTup2: [string, number] = ["gnirts a", 10];
+arrTup2 = ["b", 4];
+// arrTup2 = [4, "b"]; // error
+
+
+
+/* AND OBJECTS */
 
 
 
