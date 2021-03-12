@@ -89,7 +89,13 @@ const sayHi = () => {
     console.log("hi");
 }
 
-
+/* ------------------------------------------------------- */
+/* this section interacts with the form on the HTML page */
+// Type Casting
+const inputName = document.querySelector("#name") as HTMLInputElement;
+const inputAge = document.querySelector("#age") as HTMLInputElement;
+const inputForm = document.querySelector("form");
+const greeting = document.querySelector(".greeting") as HTMLDivElement;
 
 /* INTERFACES */
 interface PersonInterface {
@@ -116,8 +122,16 @@ class Person implements PersonInterface {
     }
 }
 
-let john = new Person("John", 35);
-console.log(john.greet());
+// getting this from the form
+inputForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const person = new Person(inputName.value, inputAge.valueAsNumber);
+
+    greeting.innerText = person.greet();
+
+    inputForm.reset(); 
+});
 
 
 

@@ -59,6 +59,13 @@ calcSum2(2, 3);
 var sayHi = function () {
     console.log("hi");
 };
+/* ------------------------------------------------------- */
+/* this section interacts with the form on the HTML page */
+// Type Casting
+var inputName = document.querySelector("#name");
+var inputAge = document.querySelector("#age");
+var inputForm = document.querySelector("form");
+var greeting = document.querySelector(".greeting");
 var gabe = {
     name: "Gabe",
     age: 38
@@ -74,5 +81,10 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
-var john = new Person("John", 35);
-console.log(john.greet());
+// getting this from the form
+inputForm === null || inputForm === void 0 ? void 0 : inputForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var person = new Person(inputName.value, inputAge.valueAsNumber);
+    greeting.innerText = person.greet();
+    inputForm.reset();
+});
