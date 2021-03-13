@@ -134,6 +134,16 @@ inputForm?.addEventListener("submit", (e) => {
 });
 
 
+/* GENERICS */
+// used when you don't know exactly what type something might be
+function doSomething<T>(arg: T) {
+    // do something
+    return arg;
+}
+
+doSomething(3);
+
+
 
 
 
